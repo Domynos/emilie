@@ -1,0 +1,515 @@
+
+/* === custom icon === */
+@import url('custom-fonts.css');
+
+@font-face {
+  font-family: "Helvetica Neue UL";
+  src: url("../fonts/helvetica-neue-ultra-light.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("../fonts/HelveticaNeue-Light.otf");
+}
+
+.rounded{
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.flip-container, .front, .back {
+	margin:auto;
+	width:200px;
+	height:200px;
+}
+
+.flipper,
+.flipper > .back, .flipper > .front{
+  -moz-transition : transform 0.6s;
+  -webkit-transition : transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+}
+.flipper > .back, .flipper > .front{
+  position: absolute;
+}
+
+.front,
+.back{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+.front{
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.back{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flip-container:hover .front{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flip-container:hover .back{
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
+.features-box{
+}
+
+.features-label{
+    margin-top:5%;
+}
+
+.team-member {
+    background-color: #FFFFFF;
+    margin-left: 1.5%;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    max-width: 380px;
+}
+
+@media screen and (max-width: 992px){
+    .team-member .mask {
+
+        overflow: hidden;
+        position: relative;
+        border:1px solid #E5E5E5;
+    }
+
+    .team-member .team-description { opacity: 0.8 }
+    .web-box > div > div:not(:first-child) h3 {
+        margin-top:1.5em;
+    }
+
+    .wow {
+      visibility: visible !important;
+      -webkit-animation: none !important;
+      -moz-animation: none !important;
+      -o-animation: none !important;
+      -ms-animation: none !important;
+      animation: none !important;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .team-member .mask {
+        height: 17em;
+        overflow: hidden;
+        position: relative;
+        border:1px solid #E5E5E5;
+    }
+
+    .team-member:hover .team-description { opacity: 0.8 }
+    .team-member:hover .slide-up { margin-top: -3em; }
+    .team-member .team-title {
+        margin: 0.5em 0 2px;
+        text-transform: none;
+    }
+    .team-member .team-description {
+        opacity: 0;
+        text-align:center;
+        word-break: break-all;
+        font-size:0.8em;
+        padding: .5em;
+    }
+    .team-member .team-description, .team-member .slide-up {
+        -webkit-transform: translate3d( 0, 0, 0 ); /* Chrome fix */
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        transition: all .4s;
+    }
+
+    .web-box > div > div:not(:first-child) h3 {
+        margin-top:1em;
+    }
+}
+
+@media screen and (min-width: 1366px){
+    .team-member {
+        opacity:0;  /* make things invisible upon start */
+        -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+        -moz-animation:fadeIn ease-in 1;
+        animation:fadeIn ease-in 1;
+
+        -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+        -moz-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
+
+        -webkit-animation-duration:1s;
+        -moz-animation-duration:1s;
+        animation-duration:1s;
+    }
+    .team-member:hover .slide-up { margin-top: -5em; }
+    .team-member .team-description {
+            font-size:1em;
+        }
+}
+
+@media screen and (min-width: 1680px){
+    .team-member:hover .slide-up { margin-top: -5em; }
+    .team-member .team-description {
+            font-size:1em;
+        }
+}
+
+
+.team-member .team-image img {
+    display: inline-block;
+    width: 100%;
+}
+
+.team-member .team-image {
+    padding:5%;
+}
+
+.web-box > div > div:not(:first-child) p {
+    margin-top:1.2em;
+}
+
+.ecommerce-box > div > div p, .mobile-box > div > div p  {
+    margin-top:2.2em;
+}
+
+.fb-share-button{
+    position:relative;
+    bottom:0.45em;
+}
+
+.copyright{
+    opacity:0.4;
+}
+
+
+/* ===============================
+Portfolio
+================================ */
+
+
+.work-nav #filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.work-nav #filters li {
+	margin: 0 10px 30px 0;
+	padding: 0;
+	float:left;
+}
+
+.work-nav #filters li a {
+	color: #7F8289;
+	font-size: 16px;
+	display: block;
+}
+
+.work-nav #filters li a:hover {
+
+}
+
+.work-nav #filters li a.selected {
+	color: #DE5E60;
+}
+
+#thumbs {
+	margin: 0;
+	padding: 0;
+}
+
+#thumbs li {
+	list-style-type: none;
+}
+
+.item-thumbs {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.item-thumbs a + img {
+	width: 100%;
+}
+
+.item-thumbs .hover-wrap {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+	-webkit-transition: all 450ms ease-out 0s;
+	   -moz-transition: all 450ms ease-out 0s;
+		 -o-transition: all 450ms ease-out 0s;
+		    transition: all 450ms ease-out 0s;
+
+	-webkit-transform: rotateY(180deg) scale(0.5,0.5);
+	   -moz-transform: rotateY(180deg) scale(0.5,0.5);
+		-ms-transform: rotateY(180deg) scale(0.5,0.5);
+		 -o-transform: rotateY(180deg) scale(0.5,0.5);
+			transform: rotateY(180deg) scale(0.5,0.5);
+}
+
+.item-thumbs:hover .hover-wrap,
+.item-thumbs.active .hover-wrap {
+	opacity: 1;
+	filter: alpha(opacity=100);
+
+	-webkit-transform: rotateY(0deg) scale(1,1);
+	   -moz-transform: rotateY(0deg) scale(1,1);
+		-ms-transform: rotateY(0deg) scale(1,1);
+		 -o-transform: rotateY(0deg) scale(1,1);
+		    transform: rotateY(0deg) scale(1,1);
+}
+
+.item-thumbs .hover-wrap .overlay-img {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	opacity: 0.80;
+	filter: alpha(opacity=80);
+	background: #000;
+}
+
+.item-thumbs .hover-wrap .overlay-img-thumb {
+	position: absolute;
+	border-radius: 60px;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+	color: #fff;
+	font-size: 32px;
+	line-height: 1em;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+
+/* --- Portolio filter --- */
+
+ul.portfolio-categ{
+	margin:10px 0 30px 0;
+	padding:0;
+	float:left;
+	list-style:none;
+}
+
+ul.portfolio-categ li{
+	margin:0;
+	padding:0 20px 0 0;
+	float:left;
+	list-style:none;
+	font-size:13px;
+	font-weight:600;
+}
+
+ul.portfolio-categ li a{
+	display:block;
+	padding:35x 0 35x 0;
+	color:#353535;
+}
+
+ul.portfolio-categ li.active a:hover, ul.portfolio-categ li a:hover,ul.portfolio-categ li a:focus,ul.portfolio-categ li a:active {
+	text-decoration:none;
+	outline:0;
+}
+
+/* --- portfolio detail --- */
+.top-wrapper {
+	margin-bottom:20px;
+}
+
+/* portfolio */
+.item-thumbs .hover-wrap .overlay-img-thumb {
+	background: #68A4C4;
+}
+
+/* fontawesome icons */
+.icon-square:hover,
+.icon-rounded:hover,
+.icon-circled:hover {
+    background-color: #68A4C4;
+}
+[class^="icon-"].active,
+[class*=" icon-"].active {
+    background-color: #68A4C4;
+}
+
+/* fancybox */
+.fancybox-close:hover {
+	background-color:#68A4C4;
+}
+.fancybox-nav:hover span {
+	background-color:#68A4C4;
+}
+
+/* Custom */
+.aboutme {
+	padding: 5%;
+    background-color: rgba(53, 53, 53, 0.57);
+    border-radius: 10px;
+}
+
+.aboutme h1 {
+    font-family: "Helvetica Neue UL";
+     letter-spacing: 2px;
+}
+
+.aboutme p {
+    font-family: "Helvetica Neue Light";
+}
+
+header {
+    padding-top: 10%;
+    padding-left: 50%;
+    padding-right: 10%;
+}
+
+hr.simple {
+	margin-left: 0;
+	margin-right: 0;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0.24);
+}
+
+.border-cv {
+    border-left: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.month-cv {
+    position: absolute;
+    top: -3px;
+    margin-left: 3px;
+    font-size: 0.5em;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.part-cv {
+    margin-bottom: 3em;
+}
+
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '3 .column.column-1-3';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+}
+
+.deckgrid .column {
+    float: left;
+}
+
+.deckgrid .column-1-3 {
+    width: 33%;
+}
+
+.post {
+    position: relative;
+}
+
+.post-container{
+    margin: 0 15px 50px 15px;
+    border: 1px solid #fff;
+
+    position:relative;
+    bottom: 0;
+
+    -moz-box-shadow: -1px 1px 2px 0px #656565;
+    -webkit-box-shadow: -1px 1px 2px 0px #656565;
+    -o-box-shadow: -1px 1px 2px 0px #656565;
+    box-shadow: -1px 1px 2px 0px #656565;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.post-container:hover {
+    opacity: 0.8;
+    text-decoration:none;
+    bottom:1em;
+}
+
+.post:visited, .post:active, .post:link {
+    text-decoration:none;
+}
+
+.post > .title > .date {
+    margin-bottom: 0;
+}
+
+.post > .title {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.66);
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: #fff;
+    padding: 10px;
+    line-height: normal;
+    text-align: left;
+}
+
+.post > .title:after {
+
+}
+
+.post > img {
+    width: 100%;
+}
+
+.radio-card {
+    background-color: rgb(246, 246, 246);
+    padding: 6%;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 1em;
+}
+
+#contact img {
+    width: 7em;
+}
+
+a:active, a:visited, a:focus, a:hover {
+  text-decoration: none;
+}
+
+#contact a:hover{
+    text-decoration:none;
+}
+
+/** Responsive rules **/
+
+@media (max-width: 767px) {
+    #cv .text-right { text-align: left; }
+    #cv h1 { font-size: 34px !important; }
+    .month-cv { top: -21px; }
+
+    .deckgrid[deckgrid]::before {
+        /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+        content: '2 .column.column-1-2';
+        font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+        visibility: hidden;
+    }
+
+    .deckgrid .column {
+        float: left;
+    }
+
+    .deckgrid .column-1-2 {
+        width: 50%;
+    }
+}
