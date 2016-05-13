@@ -246,12 +246,22 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(http://image.desk7.net/Living%20Wallpapers/1663_1280x800.jpg);
-    /*background-position: center;
+    background-image: url("../images/header.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;*/
+    -o-background-size: cover;
+}
+
+@media(max-width: 640px) {
+    header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .aboutme {
+        background-color: rgba(53, 53, 53, 0.35);
+    }
 }
 
 header .header-content {
